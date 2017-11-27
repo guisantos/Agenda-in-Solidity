@@ -1,5 +1,5 @@
-var cvDapp = artifacts.require("./CVDapp.sol");
+var simpleAgenda = artifacts.require("./SimpleAgenda.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(cvDapp);
+  deployer.deploy(simpleAgenda);
 };

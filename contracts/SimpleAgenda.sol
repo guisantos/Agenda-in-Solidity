@@ -1,12 +1,6 @@
 pragma solidity ^0.4.15;
 
-import "./CVExtender.sol";
-
-contract CVDapp is CVExtender {
-
-    string github = "https://github.com/guisantos";
-    string linkedin = "https://www.linkedin.com/in/guilherme-flores-dos-santos/";
-    string author = "Guilherme Santos";
+contract SimpleAgenda {
 
     event AddNewContact(string name, bytes32 number, string email, uint index);
     event DeleteContact(bytes32 number, uint index);
@@ -81,22 +75,5 @@ contract CVDapp is CVExtender {
     
     function getNumberAtIndex(uint index) public view returns (bytes32) {
         return contactIndex[index];
-    }
-
-    /**
-     * Below is for our CV!
-     * */
-    function getAddress() public constant returns(string) {
-        return "https://guisantos.github.io/";
-    }
-
-    function getDescription() public constant returns(string) {
-        return "Developer looking for opportunity";
-    }
-    function getTitle() public constant returns(string) {
-        return "MY DAPP CV";
-    }
-    function getAuthor() public constant returns(string, string) {
-        return (author, "gui.santos19@icloud.com");
     }
 }
